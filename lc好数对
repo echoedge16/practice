@@ -1,0 +1,9 @@
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        good_pair = 0
+        long = len(nums)
+        for i in range(long):
+            for j in range(i+1,long):
+                if nums[i] == nums [j]:
+                    good_pair += 1
+        return good_pair
