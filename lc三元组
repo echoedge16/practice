@@ -1,0 +1,13 @@
+class Solution:
+    def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
+        arr_length = len(arr)
+        counter = 0
+        for i in range(arr_length):
+            for j in range(i+1,arr_length):
+                for k in range(j+1,arr_length):
+                    result_a = arr[i] - arr[j]
+                    result_b = arr[j] - arr[k]
+                    result_c = arr[i] - arr[k]
+                    if abs(result_a) <= a and abs(result_b) <= b and abs(result_c) <= c:
+                        counter += 1
+        return counter
