@@ -1,0 +1,17 @@
+直观写：
+class Solution:
+    def addDigits(self, num: int) -> int:
+        while num>=10:
+            a=num%10
+            b=num//10
+            c=a+b
+            while 10<=c:
+                c=c%10+c//10
+            return c       
+        return num       
+数学解法：
+class Solution:
+    def addDigits(self, num: int) -> int:
+        if num==0:
+            return 0
+        return 1+(num-1)%9    
