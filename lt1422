@@ -1,0 +1,16 @@
+class Solution:
+    def maxScore(self, s: str) -> int:
+        left_zero=0
+        all_one=s.count('1')
+        max_point=0
+        for i in range(len(s)-1):
+            char=s[i]
+            if char=='0':
+                left_zero+=1
+            else:
+                all_one-=1
+            point=left_zero+all_one
+            if point>max_point:
+                max_point=point            
+        return max_point    
+#分割字符串
