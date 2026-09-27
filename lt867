@@ -1,0 +1,12 @@
+class Solution:
+    def transpose(self, matrix: list[list[int]]) -> list[list[int]]:
+        m=len(matrix)
+        n=len(matrix[0])
+        last=[]
+        for i in range(n):
+            new=[]
+            for j in range(m):
+                new.append(matrix[j][i])
+            last.append(new)
+        return last
+#调换矩阵，练的少，掌握不熟
