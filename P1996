@@ -1,0 +1,9 @@
+n,m=map(int,input().split())
+num=list(range(1,n+1))
+code=[]
+a=0
+while num:
+    a=(a+m-1)%len(num)
+    delet=num.pop(a)
+    code.append(delet)
+print(*code)  
