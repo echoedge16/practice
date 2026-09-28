@@ -1,0 +1,11 @@
+M,N=map(int,input().split())
+num=list(map(int,input().split()))
+inter=[]
+a=0
+for i in num:
+    if i not in inter:
+        a += 1
+        if len(inter)==M:
+            inter.pop(0)
+        inter.append(i)
+print(a)
