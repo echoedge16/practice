@@ -1,0 +1,26 @@
+题解
+class Solution:
+    def findMaxAverage(self, nums: list[int], k: int) -> float:
+        
+        maxTotal = total = sum(nums[:k])
+        n = len(nums)
+
+        for i in range(k, n):
+            total = total - nums[i - k] + nums[i]
+            maxTotal = max(maxTotal, total)
+        
+        return maxTotal / k
+我的写法
+class Solution:
+    def findMaxAverage(self, nums: list[int], k: int) -> float:
+        sum=0
+        ans=-float('inf')
+        ave=0
+        for i,w in enumerate(nums):
+            sum+=w
+            if i>=k-1:
+                ave=sum/k
+                ans=max(ans,ave)
+                sum-=nums[i-k+1]
+        return ans  
+对滑动窗口的理解不够深刻
