@@ -1,0 +1,15 @@
+第一次解题
+class Solution:
+    def numOfSubarrays(self, arr: list[int], k: int, threshold: int) -> int:
+        n=len(arr)
+        flag=0
+        initial_sum=threshold*k
+        ave_sum=sum(arr[:k])
+        for i in range(n-k+1):
+            if ave_sum>=initial_sum:
+                flag+=1
+            if i<n-k:
+                ave_sum=ave_sum-arr[i]+arr[i+k]
+        return flag        
+
+第二次解题（优化）
