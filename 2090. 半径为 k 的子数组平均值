@@ -1,0 +1,30 @@
+第一次解题
+1class Solution:
+2    def getAverages(self, nums: List[int], k: int) -> List[int]:
+3        l=len(nums)
+4        List=[-1]*l
+5        win=2*k+1
+6        if win>l:
+7            return List
+8        in_sun=sum(nums[:win])    
+9        for i,n in enumerate(nums):
+10            if k<=i<=l-k-1:
+11                List[i]=in_sun//win
+12                if i!=l-k-1:
+13                    in_sun=in_sun-nums[i-k]+nums[i+k+1]
+14        return List        
+
+第二次解题
+1class Solution:
+2    def getAverages(self, nums: List[int], k: int) -> List[int]:
+3        l=len(nums)
+4        List=[-1]*l
+5        win=2*k+1
+6        if win>l:
+7            return List
+8        in_sun=sum(nums[:win])    
+9        for i in range(k,l-k):
+10            List[i]=in_sun//win
+11            if i!=l-k-1:
+12                in_sun=in_sun-nums[i-k]+nums[i+k+1]
+13        return List     
