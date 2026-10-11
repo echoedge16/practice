@@ -1,0 +1,13 @@
+n=int(input())
+stu=[]
+for _ in range(n):
+    name,chi,math,eng=input().split()
+    chi,math,eng=int(chi),int(math),int(eng)
+    sum=chi+math+eng
+    stu.append([name,chi,math,eng,sum])
+for i in range(n):
+    for j in range(i+1,n):
+        name1,chi1,math1,eng1,sum1=stu[i]
+        name2,chi2,math2,eng2,sum2=stu[j]
+        if abs(chi1-chi2)<=5 and abs(math1-math2)<=5 and abs(eng1-eng2)<=5 and abs(sum1-sum2)<=10:
+            print(name1,name2)
