@@ -1,0 +1,24 @@
+L,N,M=map(int,input().split())
+rock=[0]
+for _ in range(N):
+    d =int(input())
+    rock.append(d)
+rock.append(L)
+z=1
+y=L
+ans=0
+while z<=y:
+    mid=(z+y)//2
+    move=0
+    last=rock[0]
+    for i in range(1,len(rock)):
+        if rock[i]-last<mid:
+            move+=1
+        else:
+            last=rock[i]
+    if move<=M:
+        ans=mid
+        z=mid+1
+    else:
+        y=mid-1
+print(ans)
