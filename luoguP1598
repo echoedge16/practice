@@ -1,0 +1,17 @@
+a=[0]*26
+for _ in range(4):
+    chap=input()
+    for num in chap:
+        if 'A' <= num <= 'Z':
+            a[ord(num) - ord('A')] += 1
+highest=max(a)
+for i in range(highest,0,-1):
+    b=[]
+    for j in a:
+        if j>=i:
+            b.append('*')
+        else:
+            b.append(' ')
+    print(' '.join(b))
+nums=[chr(i+ord('A'))for i in range(26)]
+print(' '.join(nums))
