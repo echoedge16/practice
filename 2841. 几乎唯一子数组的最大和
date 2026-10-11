@@ -1,0 +1,23 @@
+class Solution:
+    def maxSum(self, nums: List[int], m: int, k: int) -> int:
+        freq=defaultdict(int)
+        total=0
+        max_sum=0
+        distinct=0
+        for i in range(len(nums)):
+            num=nums[i]
+            if freq[num]==0:
+                distinct+=1
+            freq[num]+=1
+            total+=num
+            if i>=k:
+                left_num=nums[i-k]
+                freq[left_num]-=1
+                total-=left_num
+                if freq[left_num]==0:
+                    distinct-=1
+            if i>=k-1:
+                if distinct>=m:
+                    if total>max_sum:
+                        max_sum=total
+        return max_sum     
