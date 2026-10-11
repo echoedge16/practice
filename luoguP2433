@@ -1,0 +1,86 @@
+import math
+
+def main():
+    T = int(input())
+    if T == 1:
+        # 粘贴问题 1 的主函数代码
+        print("I love Luogu!")
+    elif T == 2:
+        # 粘贴问题 2 的主函数代码
+        print(2 + 4, 10 - 2 - 4)
+    elif T == 3:
+        take=14//4
+        print(take)
+        give=take*4
+        print(give)
+        stay=14-give
+        print(stay)
+    elif T == 4:
+        get=round(500/3,6)
+        print(float(get))
+    elif T == 5:
+        print((260+220)//(12+20))
+    elif T == 6:
+        print(math.sqrt(9*9+6*6))
+    elif T == 7:
+        save=100+10
+        print(save)
+        spend=save-20
+        print(spend)
+        all=0
+        print(all)
+    elif T == 8:
+        r=5
+        pi=3.141593
+        per=2*pi*r
+        area=pi*r**2
+        volume=(4*pi*r**3)/3
+        print(per)
+        print(area)
+        print(volume)
+    elif T == 9:
+        peach=1
+        for _ in range(3):
+            peach=(peach+1)*2
+        print(peach)
+    elif T == 10:
+        ma1=8
+        ma2=10
+        mi1=30
+        mi2=6
+        total1=ma1*mi1
+        total2=ma2*mi2
+        inc=(total1-total2)/(ma1-ma2)
+        basic=total1-(mi1*inc)
+        total3=basic+(10*inc)
+        ma3=round(total3/10)
+        print(ma3)
+    elif T == 11:
+        print(100/(8-5))
+    elif T == 12:
+        pos_m=ord('M')-ord('A')+1
+        print(pos_m)
+        char_18=chr(ord('A')+18-1)
+        print(char_18)
+    elif T == 13:
+        pi=3.141593
+        r1=4
+        r2=10
+        v1=(4*pi*r1**3)/3
+        v2=(4*pi*r2**3)/3
+        sum=v1+v2
+        side=math.pow(sum,1/3)
+        ans=int(side)
+    elif T == 14:
+        a=1
+        b=-120
+        c=3500
+        d=math.sqrt(b*b-4*a*c)
+        x1=(-b+d)/(2*a)
+        x2=(-b-d)/(2*a)
+        min_x=min(x1,x2)
+        reslut=round(min_x)
+        print(reslut)
+
+if __name__ == "__main__":
+    main()
