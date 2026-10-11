@@ -1,0 +1,16 @@
+w,x,h=map(int,input().split())
+cube=[[[1 for _ in range(w)] for _ in range(h)] for _ in range(h)]
+q=int(input())
+for _ in range(q):
+    x1,y1,z1,x2,y2,z2=map(int,input().split())
+    for i in range(x1-1,x2):
+        for j in range(y1-1,y2):
+            for k in range(z1-1,z2):
+                cube[i][j][k]=0
+remain=0
+for i in range(w):
+    for j in range(x):
+        for k in range(h):
+            if cube[i][j][k]==1:
+                remain+=1
+print(remain)
