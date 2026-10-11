@@ -1,0 +1,7 @@
+n,x=map(int,input().split())
+target=str(x)
+time=0
+for i in range(1,n+1):
+    group=str(i)
+    time+=group.count(target)
+print(time)
