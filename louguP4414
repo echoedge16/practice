@@ -1,0 +1,8 @@
+num=list(map(int,input().split()))
+num.sort()
+cor={'A':num[0],'B':num[1],'C':num[2]}
+nub=input()
+out=[]
+for i in nub:
+    out.append(cor[i])
+print(out[0],out[1],out[2])
