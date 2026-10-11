@@ -1,0 +1,15 @@
+n=int(input())
+ai=list(map(int,input().split()))
+prime=[]
+for i in ai:
+    solo=True
+    if i<=1:
+        solo=False
+    else:
+        for j in range(2,i//2+1):
+            if i%j==0:
+                solo=False
+                break
+    if solo:
+        prime.append(str(i))
+print(" ".join(prime))
