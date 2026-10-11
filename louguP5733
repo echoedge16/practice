@@ -1,0 +1,9 @@
+used=input()
+a=[]
+for i in used:
+    if 'a'<=i<='z':
+        up=chr(ord(i)-ord('a')+ord('A'))
+        a.append(up)
+    else:
+        a.append(i)
+print(''.join(a))
