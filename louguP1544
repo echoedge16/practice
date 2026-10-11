@@ -1,0 +1,8 @@
+m,n=map(int,input().split())
+count=[0]*10
+for i in range(m,n+1):
+    a=i
+    while a>0:
+        count[a%10]+=1
+        a//=10
+print(" ".join(map(str,count)))
